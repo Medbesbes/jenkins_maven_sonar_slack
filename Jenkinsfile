@@ -11,14 +11,14 @@ pipeline {
 	    stage('checkout') {
                 steps {
                 echo ' start checkout..'
-                git credentialsId: '2980c6eb-17f5-47e1-a3f7-ed84d5359c7a', url: 'https://github.com/Medbesbes/jenkins_project.git'
+                git credentialsId: '2980c6eb-17f5-47e1-a3f7-ed84d5359c7a', url: 'https://github.com/Medbesbes/jenkins_maven_sonar_slack.git'
                 echo 'checkout Done..'
 }
 }
 		stage('Clone') {
 		steps {
 			script {
-				git 'https://github.com/Medbesbes/jenkins_project.git';
+				git 'https://github.com/Medbesbes/jenkins_maven_sonar_slack.git';
 				echo 'Clone done with success!'
 				}
 				}
